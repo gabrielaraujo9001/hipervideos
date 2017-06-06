@@ -1,0 +1,96 @@
+<!--
+	** Projeto: Oficinas de criação de hipervídeos interativos **
+	** Orientadores: Windson Viana **
+	** Desenvolvedor web: Gabriel Rodrigues **
+	** Designer: Pedro Ítalo **
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Protótipo Projeto VRD</title>
+	<link rel="stylesheet" type="text/css" href ="style.css">
+	<link rel="stylesheet" type="text/css" href ="assets/css/fonts.css">
+	<link rel="icon" href="favicon-32x32.png">
+	<link rel="icon" href="favicon-16x16.png">
+	<script src="includes/js/popcorn-complete.js"></script>
+	<script src="includes/js/jquery-1.12.3.min.js"></script>
+	<script src="assets/js/utils.js"></script>
+</head>
+
+<body>
+	<div id="content-box">
+		<!-- Para o caso de o dispositivo estar em "portrait" -->
+		<div id="warning-message">
+			<p>Esta aplicação só pode ser visualizada no modo paisagem (landscape).<br></p>
+			<img src="assets/images/warning-message.png"/>
+		</div>
+
+		<!-- Barra de título -->
+		<header id="video-info">
+			<img id="icone-categoria-video" src="assets/images/cerebro.png"/>
+			<h1 id="titulo-video"></h1>
+		</header>
+
+		<!-- Vídeo e funcionalidades -->
+		<div id="area-player">
+		<div id="video-container">
+			<!-- Adicionando o vídeo -->
+			<div id="video-player">
+				<video id="video" poster="assets/images/previews/poster.png" webkit-playsinline>
+        			<source src="assets/videos/Prototipo VRD.mp4" type="video/mp4">
+        		</video>
+        		<!-- Botão de play -->
+        		<img src="assets/images/play130.svg" id="play"/>
+        		<!-- Bufferizando -->
+        		<img src="assets/images/buffering.svg" id="buffering"/>
+        	</div>
+        	<div id="video-drawboard"></div>
+        	<audio id="audio"></audio>
+
+        	<!-- Fundo da parte de baixo -->
+        	<div id="fundo-controles"></div>
+
+        	<!-- Barra de progresso -->
+        	<div id="barra-progresso-container">
+        		<div id="barra-progresso-padding"></div>
+				<div id="carregamento"></div>
+				<div id="progresso-hover"></div>
+				<div id="progresso"></div>
+				<div id="marcadores"><ul></ul></div>
+			</div>
+
+        	<!-- Barra de controles do Player -->
+        	<div id="container-controles">
+				<!-- Previews do vídeo -->
+				<div id="previews"><span></span></div>
+				<!-- Controles do player -->
+				<div id="controles">
+					<div id="play-pause"><img id="btn-play-pause" src="assets/images/play32.png"></div>
+					<div id="volume">
+						<div id="volume-controller"><div id="volume-handle-background"><div id="volume-handle"></div></div></div>
+						<img id="btn-volume" src="assets/images/volume32.png">
+					</div>
+				 	<div id="tempo">00:00 / 00:00</div>
+				 	<h3 id="clip-atual">Introdução</h3>
+				 	
+					<div id="tela-cheia"><img id="btn-tela-cheia" src="assets/images/telacheia32.png"></div>
+					<div id="pontos">Pontos: 0</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<!-- Tela de conclusão do vídeo -->
+		<div class="tela-de-conclusao">
+			<h1>Parabéns!</h1>
+			<h3>Você concluiu o hipervídeo <span class="titulo-final"></span>!<br>
+				Você acertou <span class="numero-de-perguntas"></span> perguntas <span class="porcentagem-de-respostas"></span> e obteve 
+				<span class="pontuacao"></span>.
+			</h3>
+			<h4></h4>
+		</div>
+	</div>
+</body>
+<script src="projeto.js"></script>
+</html>

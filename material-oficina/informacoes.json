@@ -1,0 +1,99 @@
+{
+	"__comentario": "Um comentário qualquer",
+    "titulo": "Protótipo Projeto VRD",
+    "tipo": "",
+    
+    "clips": [
+        {
+            "nome": "Capítulo 1: Exemplo",
+            "tipo": "pergunta",
+            "tempo_inicial": 0,
+            "tempo_final": 41,
+            "hotspots": [
+                {
+                    "x": 34,
+                    "y": 150,
+                    "largura": 270,
+                    "altura": 240,
+                    "link": 2
+                },
+                {
+                    "x": 345,
+                    "y": 150,
+                    "largura": 270,
+                    "altura": 240,
+                    "link": 3
+                },
+                {
+                    "x": 655,
+                    "y": 150,
+                    "largura": 270,
+                    "altura": 240,
+                    "link": 4
+                }
+            ]
+        },
+
+
+
+        {
+            "nome": "Explicação Cor Amarela",
+            "tipo": "resposta",
+            "tempo_inicial": 42,
+            "tempo_final": 52,
+            "link": 5
+        },
+
+        {
+            "nome": "Explicação Cor Vermelha",
+            "tipo": "resposta",
+            "tempo_inicial": 53,
+            "tempo_final": 67,
+            "link": 5
+        },
+
+        {
+            "nome": "Explicação Cor Verde",
+            "tipo": "resposta",
+            "tempo_inicial": 68,
+            "tempo_final": 82,
+            "link": 5
+        },
+
+
+
+        {
+            "nome": "Parte 3: Interatividade 2",
+            "tipo": "pergunta",
+            "tempo_inicial": 82,
+            "tempo_final": 95,
+            "hotspots": [
+                {
+                    "x": 40,
+                    "y": 230,
+                    "largura": 260,
+                    "altura": 240,
+                    "link": 0
+                },
+                {
+                    "x": 350,
+                    "y": 230,
+                    "largura": 260,
+                    "altura": 240,
+                    "link": 0
+                },
+                {
+                    "x": 660,
+                    "y": 230,
+                    "largura": 260,
+                    "altura": 240,
+                    "link": 0
+                }
+            ]
+        },
+
+{"__comentario": "adicione abaixo as interações pedidas"}
+
+
+    ]
+}
