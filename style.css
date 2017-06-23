@@ -1,0 +1,661 @@
+/*
+    ** Projeto: Oficinas de criação de hipervídeos interativos **
+    **  Orientadores: Melo Jr, Windson Viana e Ismael Furtado  **
+    **        Desenvolvedor web: Gabriel Rodrigues             **
+    **              Designer: Pedro Ítalo                      **
+*/
+
+/* Responsividade da aplicação */
+/* A respeito da orientação do dispositivo */
+@media only screen and (orientation:portrait){
+    #video-container { display:none; }
+    #container { display:none; }
+    #warning-message { display:block; }
+    #warning-message p{
+        position: relative;
+        font-size: 200%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #warning-message img{
+        position: relative;
+        display: inline-block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (orientation:landscape){
+    #warning-message { display:none; }
+}
+
+/* A respeito das dimensões do dispositivo */
+/** Resoluções mais comuns de dispositivos
+        - 640 x 360 (16:9)
+        - 800 x 480 (5:3)
+        - 1024 x 768 (4:3)
+        - 1280 x 800 (8:5)
+        - 1366 x 768 (16:9)
+        - 1920 x 1080 (16:9)
+        - 2048 x 1536 (4:3)
+**/
+/*@media only screen and (min-width: 640px){
+    *{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    *{
+        font-weight: 400;
+        font-size: 20px;
+    }
+}*/
+
+/* ---------------------------------------------------------------- */
+
+/* CSS reset */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 100%;
+    font-style: normal;
+    color: #EAEAEA;
+}
+
+body{
+    /*Coloquei o valor 100vh (viewport-height) porque quando o bloco tem
+    a propriedade "position: relative", o cálculo de "height: 100%" não acontece*/
+    position: relative;
+    height: 100vh;
+}
+
+#content-box{
+    position: relative;
+    height: 100%;
+    background-color: #000000;
+}
+
+/* Parte superior do player */
+#video-info{
+    position: relative;
+    width: 100%;
+    height: 64px;
+    padding: 8px;
+    opacity: 1;
+    z-index: 1;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#video-info > #icone-categoria-video{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin: 8px 16px 8px 0;
+    float: left;
+}
+
+#video-info > #foto-perfil{
+    position: relative;
+    margin: 8px 0;
+    width: 32px;
+    height: 32px;
+    float: right;
+}
+
+#video-info > #titulo-video{
+    position: relative;
+    font-size: 20px;
+}
+
+#video-info > #autor-video{
+    position: relative;
+    font-size: 16px;   
+}
+
+/* Vídeo */
+#area-player {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    background-color: #232323;
+}
+
+#area-player > #video-container{
+    position: absolute;
+    width: 960px;
+    height: 540px;
+    left: 50%;
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#area-player > #video-container > #video-player{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+#area-player > #video-container > #video-player > #video{
+    position: relative;
+    max-height: 540px;
+    width: 100%;
+    left: 50%;
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#area-player > #video-container > #video-player > #play{
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+#area-player > #video-container > #video-player > #play:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+#area-player > #video-container > #video-player > #buffering{
+    position: absolute;
+    display: none;
+    width: 10%;
+    height: 10%;
+    top: 45%;
+    left: 45%;
+        -webkit-animation:spin 1s steps(12) infinite;
+        -moz-animation:spin 1s steps(12) infinite;
+    animation:spin 1s steps(12) infinite;
+    z-index: 1;
+}
+
+@-moz-keyframes spin{
+    100%{
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin{
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#area-player > #video-container > #video-drawboard{
+    position: absolute;
+    display: none;
+    height: 92.125%;
+    left: 50%;
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+/* Controles do vídeo */
+#area-player > #video-container > #container-controles{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 8px;
+}
+
+/* ----- Previews do player -----*/
+#previews{
+    position: absolute;
+    display: none;
+    bottom: 64px;
+        -ms-transform-origin: right;
+        -moz-transform-origin: right;
+        -webkit-transform-origin: right;
+        -o-transform-origin: right;
+    transform-origin: right;
+    border: 2px solid #000000;
+    z-index: 5;
+}
+
+#previews span{
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 20px;
+    bottom: 0;
+    left: 50%;
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 90%;
+    line-height: 20px;
+    text-align: center;
+}
+
+/*#previews:after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 20px;
+    right: 50%;
+    top: 100%;
+    background-color: #EAEAEA;
+}*/
+/* -------------------------------- */
+
+#controles{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*background-color: #000000;*/
+    overflow: hidden;
+}
+
+#video-container > #fundo-controles {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    height: 72px;
+    position: absolute;
+    width: 100%;
+}
+
+#play-pause, #volume, #tela-cheia{
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 93%;
+    /*background-color: #000000;*/
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 8px;
+}
+
+#play-pause img, #volume img, #tela-cheia img{
+    position: absolute;
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    bottom: 0;
+    opacity: 0.9;
+}
+
+#play-pause:hover, #volume:hover, #tela-cheia:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+#volume-controller{
+    position: absolute;
+    display: none;
+    width: 20px;
+    height: 100px;
+    bottom: 100%;
+    right: 50%;
+        -ms-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+        -o-transform: translateX(50%);
+    transform: translateX(50%);
+    border-radius: 6px;
+    background-color: #000000;
+}
+
+#volume-handle-background{
+    position: absolute;
+    cursor: pointer;
+    width: 10px;
+    height: 90px;
+    margin: 25%;
+    border-radius: 5px;
+    background-color: #2D2D2D;
+}
+
+#volume-handle{
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+#tela-cheia{
+    float: right;
+}
+
+#tempo{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 44px;
+    margin: 0 8px;
+    position: relative;
+    vertical-align: top;
+}
+
+#clip-atual{
+    display: inline-block;
+    font-size: 18px;
+    line-height: 44px;
+    margin: 0 16px;
+    position: relative;
+    vertical-align: top;
+}
+
+#barra-progresso-container{
+    background-color: #2D2D2D;
+    bottom: 44px;
+    height: 6px;
+    position: absolute;
+    width: 928px;
+    left: 50%;
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#barra-progresso-container:hover{
+    height: 12px;
+}
+
+#barra-progresso-container > #barra-progresso-padding{
+    background-color: transparent;
+    bottom: 0;
+    height: 16px;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+}
+
+#barra-progresso-container > #barra-progresso-padding:hover{
+    cursor: pointer;
+}
+
+#carregamento, #progresso-hover, #progresso{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+        -ms-transform-origin: left;
+        -moz-transform-origin: left;
+        -webkit-transform-origin: left;
+        -o-transform-origin: left;
+    transform-origin: left;
+}
+
+#carregamento{
+    background-color: #4C4C4C;
+    z-index: 2;
+}
+
+#progresso{
+    background-color: #5077B6;
+    z-index: 3;
+}
+
+#progresso-hover{
+    background-color: rgba(255, 255, 255, 0.15);
+    z-index: 4;
+}
+
+#marcadores{
+    position: relative;
+    top: 5%;
+}
+
+#pontos{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 44px;
+    margin: 0 8px;
+    position: relative;
+    vertical-align: top;
+    float: right;
+}
+
+.tela-de-conclusao{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92.125%;
+    text-align: center;
+    background-color: rgba(45, 45, 45, 0.9);
+}
+
+.tela-de-conclusao h1{
+    font-size: 400%;
+    margin: 2%;
+}
+
+.tela-de-conclusao h3{
+    font-size: 200%;
+    line-height: 150%;
+    margin: 2%;
+}
+
+/* Interações do vídeo */
+.pergunta{
+    position: absolute;
+    padding: 4px;
+    background-color: rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    z-index: 1;
+    box-shadow: 0 0 3px 1px #444444;
+}
+
+.indice-pergunta{
+    position: relative;
+    display: inline-block;
+    width: 3.125vw;
+    height: 3.125vw;
+    margin: 0 0.9375vw 0 0;
+    padding: 1.25vh 0 0 0;
+    float: left;
+    border-radius: 50%;
+    background-color: #EAEAEA;
+    color: #2D2D2D;
+    text-align: center;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pergunta p{
+    margin: 1.25vh 0 0 0;
+}
+
+.point-n-click{
+    position: absolute;
+    opacity: 1;
+    z-index: 99;
+}
+
+.point-n-click:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.point-n-click2{
+    position: relative;
+    opacity: 1;
+    float: right;
+    width: 36px;
+}
+
+.point-n-click2:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.indice-point-n-click{
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 125%;
+    line-height: 200%;
+    background-color: #2D2D2D;
+}
+
+.respostas{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px 1px #444444;
+    z-index: 9;
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+.respostas:hover{
+    box-shadow: 0 0 3px 1px #CCCCCC;
+    cursor: pointer;
+}
+
+.informacao-adicional{
+    position: absolute;
+    display: block;
+    bottom: 20%;
+    left: 50%;
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    max-width: 40%;
+    padding: 1%;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0 0 3px 1px #444444;
+    font-size: 100%;
+}
+
+.botao-continuar{
+    position: absolute;
+    display: block;
+    bottom: 10%;
+    left: 80%;
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 1%;
+    font-size: 150%;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 0 3px 1px #444444;
+    text-align: center;
+}
+
+.botao-continuar:hover{
+    background-color: #EAEAEA;
+    color: #2D2D2D;
+    cursor: pointer;
+}
+
+/* ---------------------- */
+
+
+/* ---------- Interações do hipervídeo ---------- */
+/* Questões de múltipla escolha e explicações*/
+.marcador-multipla-escolha, .marcador-informacao-adicional, .marcador-point-n-click{
+    position: absolute;
+    display: inline-block;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    bottom: 0;
+    box-shadow: 1px 1px 1px #000000;
+    z-index: 5;
+}
+
+/*.marcador-multipla-escolha:after, .marcador-explicacao:after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 4.2vh;
+    right: 50%;
+        -ms-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+        -o-transform: translateX(50%);
+    transform: translateX(50%);
+    top: 100%;
+    box-shadow: 1px 0px 1px #000000;
+    background-color: inherit;
+}*/
+
+.marcador-multipla-escolha:hover, .marcador-informacao-adicional:hover, .marcador-point-n-click:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.marcador-informacao-adicional{
+    background-color: #EAEAEA;
+}
+
+.marcador-multipla-escolha{
+    background-color: #F7C026;
+}
+
+.marcador-point-n-click{
+    background-color: #F66622;
+}
+/* ----------------------------------------- */
+
+.icon{
+    width: 32px;
+    height: 32px;
+}
+
+.fade-out{
+    visibility: hidden;
+    opacity: 0;
+
+    -webkit-transition: visibility 0.8s, opacity 0.8s;
+    -moz-transition: visibility 0.8s, opacity 0.8s;
+    -ms-transition: visibility 0.8s, opacity 0.8s;
+    -o-transition: visibility 0.8s, opacity 0.8s;
+    transition: visibility 0.8s, opacity 0.8s;
+}
