@@ -1,0 +1,381 @@
+{
+    "metadados": {
+        "id": "JYsvJn26",
+        "titulo": "Tratamento Cirúrgico de Doença do Refluxo Gastroesofágico Pt. 2",
+        "autor": "Prof. Aldo Melo",
+        "disciplina": "Anatomia",
+        "nivel": 1,
+        "tipo": "Fixação",
+        "arquivo": "RefluxoGastroesofagico2",
+        "palavras-chave": ["cirurgia", "refluxo", "gastroesofagico"]
+    },
+
+    "clips": [
+        {
+            "id": 1,
+            "nome": "Introdução",
+            "tempo_inicial": 0,
+            "tempo_final": 64,
+            "tipo": "normal",
+            "hiperlink": 2
+        },
+        
+        {
+            "id": 2,
+            "nome": "Pergunta 1",
+            "tempo_inicial": 65,
+            "tempo_final": 143,
+            "tipo": "multipla_escolha",
+            "correta": 1,
+            "pontuacao": 1,
+            "hotspots": [
+                {
+                    "x": 20,
+                    "y": 10,
+                    "largura": 670,
+                    "altura": 64,
+                    "texto": "Na DRGE, ocorre refluxo do conteúdo gástrico ácido para o esôfago, lesando-o. Os componentes do conteúdo gástrico e as glândulas do epitélio gástrico responsáveis por sua secreção são:"
+                },
+                {
+                    "x": 20,
+                    "y": 94,
+                    "largura": 500,
+                    "altura": 50,
+                    "texto": "a) Ácido clorídrico, pepsinogênio, fator intrínseco e muco (glândulas oxínticas) e muco e gastrina (glândulas pilóricas)",
+                    "hiperlink": 3
+                },
+                {
+                "x": 20,
+                "y": 164,
+                "largura": 500,
+                "altura": 50,
+                "texto": "b) Ácido clorídrico, muco e pepsinogênio (glândulas oxínticas) e fator intrínseco e gastrina (glândulas pilóricas)",
+                "hiperlink": 4
+            }, {
+                "x": 20,
+                "y": 234,
+                "largura": 500,
+                "altura": 50,
+                "texto": "c) Ácido clorídrico e pepsinogênio (glândulas oxínticas) e fator intrínseco, muco e gastrina (glândulas pilóricas)",
+                "hiperlink": 4
+            }, {
+                "x": 20,
+                "y": 304,
+                "largura": 500,
+                "altura": 50,
+                "texto": "d) Ácido gástrico, pepsinogênio, muco e gastrina (glândulas oxínticas) e muco fator intrínseco (glândulas pilóricas)",
+                "hiperlink": 4
+            }]
+        },
+
+        {
+            "id": 3,
+            "nome": "Explicação 1",
+            "tempo_inicial": 145,
+            "tempo_final": 172,
+            "tipo": "explicacao",
+            "hiperlink": 4
+        },
+
+        {
+            "id": 4,
+            "nome": "Point n Click 1",
+            "tempo_inicial": 172,
+            "tempo_final": 174,
+            "tipo": "point_n_click",
+            "hotspots": [{
+                "x": 530,
+                "y": 360,
+                "largura": 64,
+                "altura": 64,
+                "imagem": "JYsvJn26/images/point-n-click/mouse-64.png"
+            }],
+            "informacao_adicional": [{
+                "texto": [
+                    "O esôfago é um tubo muscular de aproximadamente 25cm de comprimento e 2cm de diâmetro, que conduz o alimento da faringe para o estômago.<br/>Tem lâminas musculares circulares internas e longitudinais externas. Em seu terço superior, a lâmina externa consiste em músculo estriado voluntário; o terço inferior é formado por músculo liso, e o terço médio tem os dois tipos de músculo."
+                ]
+            }, {
+                "hiperlink": 5,
+                "imagem": "JYsvJn26/images/point-n-click/pular_informacao.png"
+            }]
+        },
+
+        {
+            "id": 5,
+            "nome": "Pergunta 2",
+            "tempo_inicial": 175,
+            "tempo_final": 176,
+            "tipo": "multipla_escolha",
+            "correta": 3,
+            "pontuacao": 1,
+            "hotspots": [{
+                "x": 20,
+                "y": 10,
+                "largura": 500,
+                "altura": 50,
+                "texto": "Normalmente, o esôfago tem três constrições, onde estruturas adjacentes deixam impressões. São elas, exceto:"
+            }, {
+                "x": 20,
+                "y": 80,
+                "largura": 220,
+                "altura": 30,
+                "texto": "a) Constrição cervical"
+            }, {
+                "x": 20,
+                "y": 130,
+                "largura": 220,
+                "altura": 30,
+                "texto": "b) Contrição broncoaórtica"
+            }, {
+                "x": 20,
+                "y": 180,
+                "largura": 220,
+                "altura": 30,
+                "texto": "c) Constrição mediastinal"
+            }, {
+                "x": 20,
+                "y": 230,
+                "largura": 220,
+                "altura": 30,
+                "texto": "d) Constrição diagragmática"
+            }],
+            "informacao_adicional": [{
+                "texto": "1 - Constrição cervical (esfíncter superior do esôfago): na junção faringoesofágica<br/>2 - Contrição broncoaórtica (torácica): constrição combinada, no local onde ocorre o primeiro cruzamento do arco da aorta, e depois o cruzamento o cruzamento pelo brônquio principal esquerdo.<br/>3 - Constrição diafragmática: no local onde o esôfago atravessa o hiato esofágico do diafragma."
+            }, {
+                "hiperlink": 6,
+                "imagem": "JYsvJn26/images/point-n-click/pular_informacao.png"
+            }]
+        },
+
+        {
+            "id": 6,
+            "nome": "Pergunta 3",
+            "tempo_inicial": 176,
+            "tempo_final": 182,
+            "tipo": "multipla_escolha",
+            "correta": 3,
+            "pontuacao": 1,
+            "hotspots": [{
+                "x": 20,
+                "y": 10,
+                "largura": 400,
+                "altura": 50,
+                "texto": "O esôfago é uma estrutura fundamental no ato da deglutição, sendo o estágio esofágico da deglutição:"
+            }, {
+                "x": 20,
+                "y": 80,
+                "largura": 480,
+                "altura": 50,
+                "texto": "a) voluntário e realizado por peristaltismo 1° (decorrente da faringe) e 2° (iniciado no próprio esôfago)",
+                "hiperlink": 8
+            }, {
+                "x": 20,
+                "y": 150,
+                "largura": 480,
+                "altura": 50,
+                "texto": "b) voluntário e realizado por peristaltismo 1° (iniciado no próprio esôfago) e 2° (decorrente da faringe)",
+                "hiperlink": 8
+            }, {
+                "x": 20,
+                "y": 220,
+                "largura": 480,
+                "altura": 50,
+                "texto": "c) involuntário e realizado por peristaltismo 1° (decorrente da faringe) e 2° (iniciado no próprio esôfago)",
+                "hiperlink": 7
+            }, {
+                "x": 20,
+                "y": 290,
+                "largura": 480,
+                "altura": 50,
+                "texto": "d) involuntário e realizado por peristaltismo 1° (iniciado no próprio esôfago) e 2° (decorrente da faringe)",
+                "hiperlink": 8
+            }]
+        },
+
+        {
+            "id": 7,
+            "nome": "Explicação 2",
+            "tempo_inicial": 183,
+            "tempo_final": 246,
+            "tipo": "explicacao",
+            "hiperlink": 8
+        },
+
+        {
+            "id": 8,
+            "nome": "Pergunta 4",
+            "tempo_inicial": 247,
+            "tempo_final": 285,
+            "tipo": "multipla_escolha",
+            "correta": 1,
+            "pontuacao": 1,
+            "hotspots": [{
+                "x": 20,
+                "y": 10,
+                "largura": 440,
+                "altura": 30,
+                "texto": "Qual estrutura nervosa está sendo identificada na imagem?"
+            }, {
+                "x": 20,
+                "y": 60,
+                "largura": 210,
+                "altura": 30,
+                "texto": "a) Tronco vagal posterior",
+                "hiperlink": 9
+            }, {
+                "x": 20,
+                "y": 110,
+                "largura": 210,
+                "altura": 30,
+                "texto": "b) Nervo esplânico anterior",
+                "hiperlink": 11
+            }, {
+                "x": 20,
+                "y": 160,
+                "largura": 210,
+                "altura": 30,
+                "texto": "c) Tronco simpático",
+                "hiperlink": 11
+            }, {
+                "x": 20,
+                "y": 210,
+                "largura": 210,
+                "altura": 30,
+                "texto": "d) Tronco vagal anterior",
+                "hiperlink": 11
+            }]
+        },
+        
+        {
+            "id": 9,
+            "nome": "Pergunta 5",
+            "tempo_inicial": 286,
+            "tempo_final": 286,
+            "tipo": "multipla_escolha",
+            "correta": 1,
+            "pontuacao": 1,
+            "hotspots": [{
+                "x": 20,
+                "y": 10,
+                "largura": 440,
+                "altura": 30,
+                "texto": "O tronco vagal anterior é originado do nervo vago esquerdo."
+            }, {
+                "x": 20,
+                "y": 60,
+                "largura": 120,
+                "altura": 30,
+                "texto": "a) Verdadeiro",
+                "hiperlink": 10
+            }, {
+                "x": 20,
+                "y": 110,
+                "largura": 120,
+                "altura": 30,
+                "texto": "b) Falso",
+                "hiperlink": 11
+            }]
+        },
+        {
+            "id": 10,
+            "nome": "Explicação 3",
+            "tempo_inicial": 287,
+            "tempo_final": 313,
+            "tipo": "explicacao",
+            "hiperlink": 11
+        },
+                         
+        {
+            "id": 11,
+            "nome": "Point n Click 2",
+            "tempo_inicial": 314,
+            "tempo_final": 347,
+            "tipo": "point_n_click",
+            "hotspots": [{
+                "x": 360,
+                "y": 320,
+                "largura": 64,
+                "altura": 64,
+                "imagem": "JYsvJn26/images/point-n-click/mouse-64.png"
+            }],
+            "informacao_adicional": [{
+                "texto": [
+                    "As estruturas apresentadas na imagem são os pilares diafragmáticos direito e esquerdo que, juntamente, formam o hiato esofágico, responsável pela constrição diafragmática do esôfago.<br/>O hiato esofágico é um dos componentes da junção esofagogástrIca, que funciona como barreira anti-refluxo, impedindo o refluxo do conteúdo gástrico para o esôfago.",
+                    "A junção corresponde à justaposição dos “esfíncteres” externo, anatômico, (porção crural do diafragma) e interno, funcional, que é o EIE (esfíncter inferior do esôfago) que se contrai e relaxa. Nas condições normais, permanece contraído, em contraste com a porção medial do esôfago que permanece relaxada.",
+                    "O EIE só relaxa frente a onda peristáltica, permitindo a livre propulsão do alimento ao estômago. Sua contração fora do peristaltismo esofágico, impede que haja refluxo do alimento para o esôfago, protegendo o mesmo do conteúdo gástrico ácido."
+                    ],
+                "bottom": 50
+            }, {
+                "hiperlink": 12,
+                "imagem": "JYsvJn26/images/point-n-click/pular_informacao.png"
+            }]
+        },
+        
+        {
+            "id": 12,
+            "nome": "Pergunta 6",
+            "tempo_inicial": 348,
+            "tempo_final": 359,
+            "tipo": "multipla_escolha",
+            "correta": 2,
+            "pontuacao": 1,
+            "hotspots": [
+                {
+                    "x": 20,
+                    "y": 10,
+                    "largura": 670,
+                    "altura": 50,
+                    "texto": "A porção indicada na imagem está sendo trazida pelo espaço retroesofágico para confeccionar a válvula. Que porção do estômago é esta?"
+                },
+                {
+                    "x": 20,
+                    "y": 80,
+                    "largura": 180,
+                    "altura": 30,
+                    "texto": "a) Cárdia",
+                    "hiperlink": 14
+                },
+                {
+                    "x": 20,
+                    "y": 130,
+                    "largura": 180,
+                    "altura": 30,
+                    "texto": "b) Fundo gástrico",
+                    "hiperlink": 13
+                },
+                {
+                    "x": 20,
+                    "y": 180,
+                    "largura": 180,
+                    "altura": 30,
+                    "texto": "c) Corpo gástrico",
+                    "hiperlink": 14
+                },
+                {
+                    "x": 20,
+                    "y": 230,
+                    "largura": 180,
+                    "altura": 30,
+                    "texto": "d) Parte pilórica",
+                    "hiperlink": 14
+                }
+            ]
+        },
+        
+        {
+            "id": 13,
+            "nome": "Explicação 4",
+            "tempo_inicial": 360,
+            "tempo_final": 383,
+            "tipo": "explicacao",
+            "hiperlink": 14
+        },
+        {
+            "id": 14,
+            "nome": "Fim",
+            "tempo_inicial": 384,
+            "tempo_final": 470,
+            "tipo": "normal"
+        }
+    ]
+}
